@@ -2263,7 +2263,7 @@ public class Plate implements Iterable<Well>, Comparable<Plate> {
      * @param    Object    the object
      * @return             true if equal, false otherwise
      */
-    public boolean equals(Object object) {
+     public boolean equals(Object object) {
         
         if (object instanceof Plate == false) {
             return false;
@@ -2281,6 +2281,7 @@ public class Plate implements Iterable<Well>, Comparable<Plate> {
                this.type == plate.type() &&
                this.descriptor.equals(plate.descriptor()) &&
                this.allGroups().equals(plate.allGroups()) &&
+               this.dataSet().equals(plate.dataSet()) &&
                this.size() == plate.size() &&
                this.dataType == plate.dataType();
     }
@@ -2321,7 +2322,7 @@ public class Plate implements Iterable<Well>, Comparable<Plate> {
      *                           plate1 > plate2 --> 1
      *                           plate1 < plate2 --> -1
      */
-    public int compare(Plate plate1, Plate plate2) throws ClassCastException {
+public int compare(Plate plate1, Plate plate2) throws ClassCastException {
         
         if(plate1.equals(plate2)) {
             return 0;
@@ -2358,6 +2359,12 @@ public class Plate implements Iterable<Well>, Comparable<Plate> {
             return 1;
         } else if(plate1.dataType != plate2.dataType){
             return -1;
+        }
+        
+        int comparison = plate1.dataSet().compareTo(plate2.dataSet());
+
+        if(comparison != 0) {
+        	return comparison;
         }
         
         return 0;

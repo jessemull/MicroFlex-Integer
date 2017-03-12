@@ -48,7 +48,7 @@ public class Decrement extends MathOperationIntegerUnary {
         List<Integer> result = new ArrayList<Integer>();
         
         for(int in : list) {
-            result.add(in--);
+            result.add(--in);
         }
         
         return result;

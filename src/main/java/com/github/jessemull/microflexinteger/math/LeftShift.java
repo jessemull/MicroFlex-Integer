@@ -21,6 +21,8 @@
 
 package com.github.jessemull.microflexinteger.math;
 
+
+
 /* ------------------------------ Dependencies ------------------------------ */
 
 import java.util.ArrayList;
@@ -74,5 +76,5 @@ public class LeftShift extends MathOperationShift {
         
         return result;
     }
-    
+
 }

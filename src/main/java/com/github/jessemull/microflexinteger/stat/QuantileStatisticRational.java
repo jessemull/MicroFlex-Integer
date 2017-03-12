@@ -130,7 +130,7 @@ import com.github.jessemull.microflexinteger.plate.WellSet;
  * @address http://www.jessemull.com
  * @email hello@jessemull.com
  */
-public abstract class QuantileStatisticIntegers {
+public abstract class QuantileStatisticRational {
     
     /* --------------- Well statistics for all plate wells ----------------- */
     
